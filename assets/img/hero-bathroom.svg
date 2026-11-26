@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" fill="none">
+  <rect width="560" height="360" rx="14" fill="#102026"/>
+  <g stroke="#c7a675" stroke-opacity="0.18" stroke-width="1">
+    <line x1="0" y1="60" x2="560" y2="60"/>
+    <line x1="0" y1="120" x2="560" y2="120"/>
+    <line x1="0" y1="180" x2="560" y2="180"/>
+    <line x1="0" y1="240" x2="560" y2="240"/>
+    <line x1="0" y1="300" x2="560" y2="300"/>
+    <line x1="80" y1="0" x2="80" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="360"/>
+    <line x1="240" y1="0" x2="240" y2="360"/>
+    <line x1="320" y1="0" x2="320" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="480" y1="0" x2="480" y2="360"/>
+  </g>
+  <!-- Architectural Toilet 1-Piece Blueprint -->
+  <rect x="65" y="115" width="76" height="82" rx="10" fill="#193038" stroke="#d8c49a" stroke-width="2"/>
+  <path d="M58 197 H148 C152 242 135 276 103 276 C71 276 54 242 58 197 Z" fill="#1d3740" stroke="#d8c49a" stroke-width="2"/>
+  <rect x="78" y="276" width="50" height="34" rx="4" fill="#193038" stroke="#d8c49a" stroke-width="2"/>
+  <!-- Architectural Vanity & Vessel Lavabo -->
+  <rect x="210" y="195" width="140" height="115" rx="6" fill="#193038" stroke="#d8c49a" stroke-width="2"/>
+  <path d="M235 160 H325 C322 186 308 195 280 195 C252 195 238 186 235 160 Z" fill="#23424d" stroke="#d8c49a" stroke-width="2"/>
+  <path d="M280 160 V135 C280 126 294 126 294 136" stroke="#c7a675" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="235" y="48" width="90" height="62" rx="8" fill="#162b32" stroke="#c7a675" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- Rain Shower Column -->
+  <path d="M430 310 V76 C430 60 445 52 468 52 H492" stroke="#d8c49a" stroke-width="3" stroke-linecap="round"/>
+  <rect x="468" y="52" width="46" height="10" rx="4" fill="#c7a675"/>
+  <line x1="476" y1="68" x2="476" y2="92" stroke="#c7a675" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="491" y1="68" x2="491" y2="98" stroke="#c7a675" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="506" y1="68" x2="506" y2="92" stroke="#c7a675" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <!-- Dimension Callouts -->
+  <text x="65" y="336" fill="#d8c49a" font-family="monospace" font-size="11">TÂM THOÁT: 300MM</text>
+  <text x="215" y="336" fill="#d8c49a" font-family="monospace" font-size="11">CAO BÀN ĐÁ: 800-850MM</text>
+  <text x="410" y="336" fill="#d8c49a" font-family="monospace" font-size="11">ÁP LỰC: ≥ 1.5 BAR</text>
+</svg>

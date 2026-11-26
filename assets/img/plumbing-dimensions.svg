@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" fill="none">
+  <rect width="420" height="260" rx="12" fill="#ede9dd"/>
+  <line x1="64" y1="30" x2="64" y2="215" stroke="#15272e" stroke-width="4"/>
+  <line x1="64" y1="215" x2="376" y2="215" stroke="#15272e" stroke-width="4"/>
+  <circle cx="194" cy="215" r="10" fill="#b76b4f"/>
+  <line x1="64" y1="180" x2="194" y2="180" stroke="#b76b4f" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="194" y1="168" x2="194" y2="215" stroke="#b76b4f" stroke-width="2"/>
+  <text x="129" y="172" text-anchor="middle" fill="#b76b4f" font-family="monospace" font-size="13" font-weight="bold">300 mm chuẩn</text>
+  <rect x="246" y="74" width="110" height="106" rx="8" fill="#fffdfa" stroke="#15272e" stroke-width="2"/>
+  <text x="301" y="112" text-anchor="middle" fill="#15272e" font-family="Georgia, serif" font-size="13" font-weight="bold">Tâm Thoát Sàn</text>
+  <text x="301" y="134" text-anchor="middle" fill="#657275" font-family="sans-serif" font-size="11">Đo sau ốp gạch tường</text>
+  <text x="301" y="154" text-anchor="middle" fill="#5e8c76" font-family="monospace" font-size="11">Ống PVC Ø90 - Ø114</text>
+</svg>

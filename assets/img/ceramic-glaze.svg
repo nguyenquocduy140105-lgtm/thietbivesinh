@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" fill="none">
+  <rect width="420" height="260" rx="12" fill="#ede9dd"/>
+  <rect x="28" y="36" width="168" height="188" rx="10" fill="#fffdfa" stroke="#15272e" stroke-width="2"/>
+  <circle cx="112" cy="108" r="38" fill="#15272e" fill-opacity="0.08" stroke="#15272e" stroke-width="2"/>
+  <path d="M94 108 L106 120 L132 94" stroke="#5e8c76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="112" y="176" text-anchor="middle" fill="#15272e" font-family="Georgia, serif" font-size="14" font-weight="bold">Men Sứ Nano 1280°C</text>
+  <text x="112" y="198" text-anchor="middle" fill="#657275" font-family="sans-serif" font-size="11">Hút nước &lt; 0.5%</text>
+  <rect x="224" y="36" width="168" height="188" rx="10" fill="#15272e"/>
+  <circle cx="308" cy="108" r="38" fill="#c7a675" fill-opacity="0.16" stroke="#d8c49a" stroke-width="2"/>
+  <text x="308" y="113" text-anchor="middle" fill="#d8c49a" font-family="monospace" font-size="14" font-weight="bold">SUS 304</text>
+  <text x="308" y="176" text-anchor="middle" fill="#fffdfa" font-family="Georgia, serif" font-size="14" font-weight="bold">Inox 304 &amp; Đồng Thau</text>
+  <text x="308" y="198" text-anchor="middle" fill="#d8c49a" font-family="sans-serif" font-size="11">18% Cr - 8% Ni chống gỉ</text>
+</svg>
