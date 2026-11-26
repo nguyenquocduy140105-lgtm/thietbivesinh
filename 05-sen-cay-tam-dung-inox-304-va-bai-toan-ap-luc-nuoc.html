@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sen cây tắm đứng Inox 304: Cách tính áp lực cột nước và kiểm tra lõi van</title>
+<style>
+  .bx-premium, .bx-premium * { box-sizing: border-box; }
+  .bx-premium {
+    --bx-ink: #202d2e;
+    --bx-deep: #133335;
+    --bx-deep2: #0c2325;
+    --bx-teal: #237070;
+    --bx-moss: #d1e5dc;
+    --bx-gold: #c6a46c;
+    --bx-sand: #f6f2ea;
+    --bx-line: #e0e9e4;
+    --bx-body: #4a5655;
+    max-width: 1060px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: var(--bx-body);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.88;
+    padding: 18px 16px 42px;
+  }
+  .bx-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; background: var(--bx-deep2); color: #ffffff; border-radius: 14px; padding: 34px 32px; align-items: center; }
+  .bx-eyebrow { display: inline-block; color: #d7bb82; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 12px; }
+  .bx-hero h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.28; color: #ffffff; margin: 0 0 14px; font-weight: 700; }
+  .bx-hero-desc { color: rgba(255, 255, 255, 0.84); font-size: 15.5px; line-height: 1.75; margin: 0; }
+  .bx-hero-photo { margin: 0; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(198, 164, 108, 0.35); border-radius: 12px; overflow: hidden; }
+  .bx-hero-photo img { width: 100%; height: 270px; object-fit: contain; display: block; background: #ffffff; padding: 10px; }
+  .bx-photo-ribbon { padding: 10px 14px; font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.75); background: rgba(8, 22, 24, 0.78); }
+  .bx-intro { background: #f6f8f5; border: 1px solid var(--bx-line); border-radius: 12px; padding: 24px 26px; margin-top: 18px; }
+  .bx-intro > p { margin: 0 0 18px; color: var(--bx-ink); }
+  .bx-snapshot { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .bx-snap-card { background: #ffffff; border: 1px solid var(--bx-line); border-left: 3px solid var(--bx-gold); border-radius: 8px; padding: 14px 16px; }
+  .bx-snap-card strong { display: block; color: var(--bx-ink); font-size: 14.5px; margin-bottom: 4px; }
+  .bx-snap-card span { font-size: 13.5px; line-height: 1.6; color: var(--bx-body); }
+  .bx-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 36px; margin-top: 34px; align-items: start; }
+  .bx-toc { position: sticky; top: 18px; background: var(--bx-sand); border: 1px solid var(--bx-line); border-radius: 12px; padding: 18px 16px; }
+  .bx-toc-title { font-family: Georgia, 'Times New Roman', serif; font-size: 15px; font-weight: 700; color: var(--bx-deep); margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(19, 51, 53, 0.14); }
+  .bx-toc ol { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.55; }
+  .bx-toc li { margin-bottom: 8px; }
+  .bx-toc a { color: var(--bx-ink); text-decoration: none; }
+  .bx-toc a:hover { color: var(--bx-teal); text-decoration: underline; }
+  .bx-chapter { padding-bottom: 28px; margin-bottom: 32px; border-bottom: 1px solid var(--bx-line); }
+  .bx-chapter-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+  .bx-num { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 700; color: var(--bx-gold); line-height: 1; flex-shrink: 0; }
+  .bx-chapter h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 23px; line-height: 1.35; color: var(--bx-ink); margin: 0; }
+  .bx-chapter p { margin: 0 0 15px; }
+  .bx-table-block { margin: 22px 0; border: 1px solid var(--bx-line); border-radius: 10px; overflow-x: auto; background: #ffffff; }
+  .bx-table-title { background: #f0f5f2; padding: 10px 16px; font-weight: 700; font-size: 14px; color: var(--bx-deep); border-bottom: 1px solid var(--bx-line); }
+  .bx-table-block table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; line-height: 1.6; }
+  .bx-table-block th { background: var(--bx-deep); color: #ffffff; text-align: left; padding: 11px 14px; font-weight: 700; }
+  .bx-table-block td { padding: 11px 14px; border-bottom: 1px solid var(--bx-line); vertical-align: top; }
+  .bx-table-block tr:nth-child(even) td { background: #fafcfb; }
+  .bx-note { background: #f3f8f5; border: 1px solid #c9ddd3; border-left: 4px solid var(--bx-teal); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .bx-note strong { display: block; color: var(--bx-deep); margin-bottom: 6px; }
+  .bx-note a { color: var(--bx-teal); font-weight: 700; text-decoration: underline; }
+  .bx-check { background: var(--bx-sand); border: 1px solid var(--bx-line); border-radius: 12px; padding: 20px 22px; margin-top: 22px; }
+  .bx-check h3 { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: var(--bx-deep); margin: 0 0 14px; }
+  .bx-check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .bx-check label { display: flex; align-items: flex-start; gap: 10px; background: #ffffff; border: 1px solid var(--bx-line); border-radius: 8px; padding: 11px 13px; font-size: 14px; line-height: 1.5; cursor: pointer; }
+  .bx-check input[type="checkbox"] { margin-top: 3px; accent-color: var(--bx-teal); }
+  .bx-check input[type="checkbox"]:checked + span { text-decoration: line-through; opacity: 0.6; }
+  .bx-related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+  .bx-related-card { display: block; background: #f8faf9; border: 1px solid var(--bx-line); border-radius: 10px; padding: 15px 17px; text-decoration: none; color: var(--bx-ink); }
+  .bx-related-card strong { display: block; color: var(--bx-deep); font-size: 15px; margin-bottom: 5px; }
+  .bx-related-card span { font-size: 13.5px; color: var(--bx-body); line-height: 1.55; display: block; }
+  .bx-credits { font-size: 12px; color: #71807e; border-top: 1px solid var(--bx-line); padding-top: 14px; margin-top: 28px; }
+  @media (max-width: 780px) { .bx-hero, .bx-snapshot, .bx-layout, .bx-check-grid, .bx-related { grid-template-columns: 1fr; } .bx-toc { position: static; } }
+</style>
+</head>
+<body>
+<article class="bx-premium">
+  <header class="bx-hero">
+    <div class="bx-hero-copy">
+      <span class="bx-eyebrow">Sổ tay kỹ thuật sen vòi phòng tắm</span>
+      <h1>Sen cây tắm đứng Inox 304: Cách tính áp lực cột nước và kiểm tra lõi van</h1>
+      <p class="bx-hero-desc">Hướng dẫn xác định khoảng cách tim cấp nước nóng lạnh 150mm, tính chiều cao bồn chứa nước tối thiểu và phân biệt thân vòi SUS 304.</p>
+    </div>
+    <figure class="bx-hero-photo">
+      <img src="https://thietbivesinhgiakho.vn/upload/product/020620092723_300x300.jpg" alt="Mẫu sen cây tắm đứng nóng lạnh vuông Inox 304 Navier NV-806" loading="eager" referrerpolicy="no-referrer">
+      <figcaption class="bx-photo-ribbon">Minh họa cấu hình sen cây tắm đứng nóng lạnh Inox SUS 304 · Nguồn: Thiết Bị Vệ Sinh Giá Kho.</figcaption>
+    </figure>
+  </header>
+
+  <section class="bx-intro" aria-label="Tóm tắt định hướng">
+    <p>Sen cây tắm đứng (Rain Shower Column) mang lại trải nghiệm tia nước mưa bao phủ toàn thân nhưng đòi hỏi cột áp nước lớn hơn nhiều so với sen tắm cầm tay thông thường. Tài liệu này giúp gia chủ kiểm tra áp lực nước thực tế và chọn chất liệu thân sen bền bỉ với nguồn nước sinh hoạt.</p>
+    <div class="bx-snapshot">
+      <div class="bx-snap-card">
+        <strong>Tim ống nóng lạnh 150mm</strong>
+        <span>Hai đầu ren âm tường đặt cao 850–950mm từ sàn, nóng bên trái và lạnh bên phải.</span>
+      </div>
+      <div class="bx-snap-card">
+        <strong>Cột áp nước ≥ 8–10 mét</strong>
+        <span>Đáy bồn nước cần cao hơn vị trí lắp sen ít nhất 2.5–3 tầng lầu hoặc có bơm tăng áp.</span>
+      </div>
+      <div class="bx-snap-card">
+        <strong>Phôi Inox SUS 304 chuẩn</strong>
+        <span>Không chứa chì, bề mặt xước mờ không bong tróc lớp mạ và chịu nhiệt nước nóng 70°C.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="bx-layout">
+    <nav class="bx-toc" aria-label="Mục lục">
+      <div class="bx-toc-title">Nội dung bài viết</div>
+      <ol>
+        <li><a href="#thm-5-1">Cách tính áp lực nước thực tế cho bát sen trần</a></li>
+        <li><a href="#thm-5-2">Tiêu chuẩn đặt hai đầu ren âm tường 150mm</a></li>
+        <li><a href="#thm-5-3">So sánh thân sen Inox SUS 304 và đồng thau mạ PVD</a></li>
+        <li><a href="#thm-5-4">Cấu tạo lõi van Ceramic và đầu phun Silicon chống bám cặn</a></li>
+        <li><a href="#thm-5-5">Checklist nghiệm thu lắp đặt sen cây tắm đứng</a></li>
+      </ol>
+    </nav>
+
+    <div class="bx-chapters">
+      <section id="thm-5-1" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">01</span><h2>Cách tính áp lực nước thực tế cho bát sen trần</h2></div>
+        <p>Theo nguyên lý thủy lực, cứ mỗi 10 mét chiều cao cột nước thẳng đứng sẽ tạo ra áp suất tĩnh khoảng 1 bar. Để nước có thể leo lên hết ống cần sen đứng (cao 2.1m) và phun đều qua hơn 100 lỗ tia của bát sen trần đường kính 200–250mm, áp lực nước tối thiểu tại củ sen phải đạt từ 1.2 đến 1.5 bar.</p>
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 1: Đánh giá áp lực nước theo vị trí tầng phòng tắm</div>
+          <table>
+            <thead><tr><th>Vị trí phòng tắm so với bồn mái</th><th>Áp lực nước ước tính</th><th>Phương án cấu hình khuyến nghị</th></tr></thead>
+            <tbody>
+              <tr><td>Cách bồn nước từ 3 tầng trở lên (&gt;10m)</td><td>1.5 – 2.5 bar (Mạnh)</td><td>Lắp tốt mọi dòng sen cây bát lớn 250mm và sen phím đàn</td></tr>
+              <tr><td>Cách bồn nước khoảng 2 tầng (6–8m)</td><td>0.8 – 1.2 bar (Trung bình)</td><td>Chọn sen cây bát mỏng có lỗ phun silicon tăng áp</td></tr>
+              <tr><td>Tầng áp mái ngay sát dưới bồn nước (&lt;4m)</td><td>&lt; 0.5 bar (Yếu)</td><td>Bắt buộc lắp thêm bơm tăng áp tự động cho đường nóng lạnh</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="thm-5-2" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">02</span><h2>Tiêu chuẩn đặt hai đầu ren âm tường 150mm</h2></div>
+        <p>Hai đầu co ren trong G1/2" (Ø21mm) cấp nước nóng và lạnh phải được cố định chắc chắn trong tường ở độ cao 850–950mm từ mặt sàn, tâm hai lỗ cách nhau 150mm. Mặt ngoài của đầu ren nên nằm phẳng hoặc âm vào trong mặt gạch ốp từ 2–4mm để khi vặn chân sen chữ Z và chụp bát hoa hồng sẽ ôm sát mặt gạch không bị hở ren.</p>
+      </section>
+
+      <section id="thm-5-3" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">03</span><h2>So sánh thân sen Inox SUS 304 và đồng thau mạ PVD</h2></div>
+        <p>Dòng sen cây Inox SUS 304 (như Navier NV-806 hoặc NV-805) được ưa chuộng nhờ bề mặt xước mờ cứng cáp, dễ vệ sinh vết nước bám và mức giá hợp lý. Trong khi đó, dòng củ sen đồng thau đúc mạ Crom hoặc mạ PVD màu xám súng (Gunmetal) lại có ưu thế ở các thiết kế phím đàn hiển thị nhiệt độ LED chạy bằng tua-bin nước.</p>
+        <div class="bx-note">
+          <strong>Tham khảo các cấu hình sen cây tắm đứng thực tế</strong>
+          Bạn có thể đối chiếu kiểu dáng bát sen vuông, bát sen tròn, sen cây phím đàn và kích thước chiều cao ống đứng tại danh mục <a href="https://thietbivesinhgiakho.vn/sen-cay-tam/" target="_blank" rel="noopener">sen cây tắm đứng</a> để chọn mẫu phù hợp với chiều cao trần và áp lực nước gia đình.
+        </div>
+      </section>
+
+      <section id="thm-5-4" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">04</span><h2>Cấu tạo lõi van Ceramic và đầu phun Silicon chống bám cặn</h2></div>
+        <p>Các núm phun nước trên mặt bát sen cao cấp được làm bằng cao su Silicon y tế mềm dẻo. Khi nguồn nước có cặn canxi bám vào đầu lỗ phun làm tia nước bị lệch, người dùng chỉ cần dùng ngón tay miết nhẹ qua bề mặt núm silicon là cặn vôi tự bung ra ngay lập tức mà không cần tháo bát sen đi ngâm hóa chất.</p>
+      </section>
+
+      <section id="thm-5-5" class="bx-chapter" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <div class="bx-chapter-head"><span class="bx-num">05</span><h2>Checklist nghiệm thu lắp đặt sen cây tắm đứng</h2></div>
+        <div class="bx-check">
+          <h3>Checklist kiểm tra trước khi bàn giao hệ sen cây</h3>
+          <div class="bx-check-grid">
+            <label><input type="checkbox"><span>Đã xả sạch cát đá trong cả hai ống nóng – lạnh trước khi lắp củ sen.</span></label>
+            <label><input type="checkbox"><span>Củ sen cân bằng ngang, ống cần đứng thẳng vuông góc với sàn.</span></label>
+            <label><input type="checkbox"><span>Gạt trái ra nước nóng, gạt phải ra nước lạnh, không rỉ giọt ở chân chữ Z.</span></label>
+            <label><input type="checkbox"><span>Chuyển đổi mượt mà giữa 3 chế độ: bát sen trần, tay sen và vòi xả xô.</span></label>
+          </div>
+        </div>
+        <div class="bx-related" style="margin-top:24px;">
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/chon-combo-thiet-bi-ve-sinh-dong-bo" target="_blank" rel="noopener">
+            <strong>Chọn combo thiết bị vệ sinh cho công trình</strong>
+            <span>Phương án mua trọn bộ sen cây, bồn cầu 1 khối và bàn đá lavabo tiết kiệm 40%.</span>
+          </a>
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/chau-rua-mat-lavabo-tu-chau-pvc" target="_blank" rel="noopener">
+            <strong>Chậu rửa mặt lavabo đặt bàn và tủ chậu PVC</strong>
+            <span>Cách bố trí cao độ quầy rửa mặt đồng bộ với khu vực tắm đứng.</span>
+          </a>
+        </div>
+        <p class="bx-credits">Ảnh tham khảo: Thiết Bị Vệ Sinh Giá Kho. Áp lực nước thực tế phụ thuộc vào cao độ bồn chứa và đường kính ống cấp của từng công trình.</p>
+      </section>
+    </div>
+  </div>
+</article>
+</body>
+</html>

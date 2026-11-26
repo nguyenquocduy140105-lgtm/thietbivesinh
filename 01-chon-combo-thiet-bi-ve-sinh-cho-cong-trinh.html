@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chọn combo thiết bị vệ sinh cho công trình: Từ khảo sát đến nghiệm thu</title>
+<style>
+  .bx-premium, .bx-premium * { box-sizing: border-box; }
+  .bx-premium {
+    --bx-ink: #202d2e;
+    --bx-deep: #133335;
+    --bx-deep2: #0c2325;
+    --bx-teal: #237070;
+    --bx-moss: #d1e5dc;
+    --bx-gold: #c6a46c;
+    --bx-sand: #f6f2ea;
+    --bx-line: #e0e9e4;
+    --bx-body: #4a5655;
+    max-width: 1060px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: var(--bx-body);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.88;
+    padding: 18px 16px 42px;
+  }
+  .bx-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    background: var(--bx-deep2);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 34px 32px;
+    align-items: center;
+  }
+  .bx-eyebrow {
+    display: inline-block;
+    color: #d7bb82;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .bx-hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.28;
+    color: #ffffff;
+    margin: 0 0 14px;
+    font-weight: 700;
+  }
+  .bx-hero-desc {
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 15.5px;
+    line-height: 1.75;
+    margin: 0;
+  }
+  .bx-hero-photo {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(198, 164, 108, 0.35);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .bx-hero-photo img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+    background: #ffffff;
+  }
+  .bx-photo-ribbon {
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(8, 22, 24, 0.78);
+  }
+  .bx-intro {
+    background: #f6f8f5;
+    border: 1px solid var(--bx-line);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin-top: 18px;
+  }
+  .bx-intro > p {
+    margin: 0 0 18px;
+    color: var(--bx-ink);
+  }
+  .bx-snapshot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .bx-snap-card {
+    background: #ffffff;
+    border: 1px solid var(--bx-line);
+    border-left: 3px solid var(--bx-gold);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .bx-snap-card strong {
+    display: block;
+    color: var(--bx-ink);
+    font-size: 14.5px;
+    margin-bottom: 4px;
+  }
+  .bx-snap-card span {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--bx-body);
+  }
+  .bx-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 36px;
+    margin-top: 34px;
+    align-items: start;
+  }
+  .bx-toc {
+    position: sticky;
+    top: 18px;
+    background: var(--bx-sand);
+    border: 1px solid var(--bx-line);
+    border-radius: 12px;
+    padding: 18px 16px;
+  }
+  .bx-toc-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bx-deep);
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(19, 51, 53, 0.14);
+  }
+  .bx-toc ol {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .bx-toc li {
+    margin-bottom: 8px;
+  }
+  .bx-toc a {
+    color: var(--bx-ink);
+    text-decoration: none;
+  }
+  .bx-toc a:hover {
+    color: var(--bx-teal);
+    text-decoration: underline;
+  }
+  .bx-chapter {
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--bx-line);
+  }
+  .bx-chapter-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .bx-num {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--bx-gold);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .bx-chapter h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 23px;
+    line-height: 1.35;
+    color: var(--bx-ink);
+    margin: 0;
+  }
+  .bx-chapter p {
+    margin: 0 0 15px;
+  }
+  .bx-table-block {
+    margin: 22px 0;
+    border: 1px solid var(--bx-line);
+    border-radius: 10px;
+    overflow-x: auto;
+    background: #ffffff;
+  }
+  .bx-table-title {
+    background: #f0f5f2;
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--bx-deep);
+    border-bottom: 1px solid var(--bx-line);
+  }
+  .bx-table-block table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .bx-table-block th {
+    background: var(--bx-deep);
+    color: #ffffff;
+    text-align: left;
+    padding: 11px 14px;
+    font-weight: 700;
+  }
+  .bx-table-block td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--bx-line);
+    vertical-align: top;
+  }
+  .bx-table-block tr:nth-child(even) td {
+    background: #fafcfb;
+  }
+  .bx-table-caption {
+    padding: 8px 14px;
+    font-size: 12px;
+    color: #6c7a78;
+    background: #f8faf9;
+  }
+  .bx-figure {
+    margin: 22px 0;
+    border: 1px solid var(--bx-line);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .bx-figure img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    display: block;
+    padding: 12px;
+    background: #ffffff;
+  }
+  .bx-figcap {
+    padding: 10px 16px;
+    font-size: 12.5px;
+    color: #5e6d6b;
+    background: #f6f8f5;
+    border-top: 1px solid var(--bx-line);
+  }
+  .bx-note {
+    background: #f3f8f5;
+    border: 1px solid #c9ddd3;
+    border-left: 4px solid var(--bx-teal);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 22px 0;
+  }
+  .bx-note strong {
+    display: block;
+    color: var(--bx-deep);
+    margin-bottom: 6px;
+  }
+  .bx-note a {
+    color: var(--bx-teal);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .bx-faq details {
+    background: #fafcfb;
+    border: 1px solid var(--bx-line);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .bx-faq summary {
+    font-weight: 700;
+    color: var(--bx-ink);
+    cursor: pointer;
+  }
+  .bx-faq details p {
+    margin: 10px 0 0;
+    font-size: 15px;
+  }
+  .bx-check {
+    background: var(--bx-sand);
+    border: 1px solid var(--bx-line);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-top: 22px;
+  }
+  .bx-check h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    color: var(--bx-deep);
+    margin: 0 0 14px;
+  }
+  .bx-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .bx-check label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid var(--bx-line);
+    border-radius: 8px;
+    padding: 11px 13px;
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .bx-check input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: var(--bx-teal);
+  }
+  .bx-check input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  .bx-end {
+    background: linear-gradient(135deg, #173b3e, #244f4c);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin: 20px 0 26px;
+  }
+  .bx-end h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+  .bx-end p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .bx-related {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .bx-related-card {
+    display: block;
+    background: #f8faf9;
+    border: 1px solid var(--bx-line);
+    border-radius: 10px;
+    padding: 15px 17px;
+    text-decoration: none;
+    color: var(--bx-ink);
+  }
+  .bx-related-card strong {
+    display: block;
+    color: var(--bx-deep);
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .bx-related-card span {
+    font-size: 13.5px;
+    color: var(--bx-body);
+    line-height: 1.55;
+    display: block;
+  }
+  .bx-credits {
+    font-size: 12px;
+    color: #71807e;
+    border-top: 1px solid var(--bx-line);
+    padding-top: 14px;
+    margin-top: 28px;
+  }
+  @media (max-width: 780px) {
+    .bx-hero, .bx-snapshot, .bx-layout, .bx-check-grid, .bx-related {
+      grid-template-columns: 1fr;
+    }
+    .bx-toc { position: static; }
+  }
+</style>
+</head>
+<body>
+<article class="bx-premium">
+  <header class="bx-hero">
+    <div class="bx-hero-copy">
+      <span class="bx-eyebrow">Sổ tay kỹ thuật và thiết bị phòng tắm</span>
+      <h1>Chọn combo thiết bị vệ sinh cho công trình: Từ khảo sát đến nghiệm thu</h1>
+      <p class="bx-hero-desc">Cách đo đường nước chờ, bóc tách cấu phần gói 9–11 món, kiểm định men sứ Nano và kiểm soát ngân sách trước khi lắp đặt.</p>
+    </div>
+    <figure class="bx-hero-photo">
+      <img src="https://thietbivesinhgiakho.vn/upload/hinhanh/444419034234385.png" alt="Trưng bày cấu hình combo thiết bị vệ sinh đồng bộ tại showroom" loading="eager" referrerpolicy="no-referrer">
+      <figcaption class="bx-photo-ribbon">Minh họa cấu hình trưng bày đồng bộ các nhóm thiết bị phòng tắm · Nguồn: Thiết Bị Vệ Sinh Giá Kho. Chỉ dùng minh họa thông số kỹ thuật.</figcaption>
+    </figure>
+  </header>
+
+  <section class="bx-intro" aria-label="Tóm tắt định hướng">
+    <p>Tài liệu này được biên soạn dành cho chủ nhà, kỹ sư giám sát và bộ phận thu mua công trình khi cần trang bị đồng bộ thiết bị phòng tắm. Thay vì chọn rời rạc từng thiết bị dễ dẫn đến lệch ren đấu nối hoặc chênh màu men sứ, quy trình 11 bước dưới đây giúp bạn chốt cấu hình dựa trên hạ tầng đường ống thực tế.</p>
+    <div class="bx-snapshot">
+      <div class="bx-snap-card">
+        <strong>Bắt đầu từ đường ống chờ</strong>
+        <span>Đo tâm thoát sàn 300mm và cột áp nước thực tế trước khi chọn kiểu bồn cầu hay sen cây.</span>
+      </div>
+      <div class="bx-snap-card">
+        <strong>So sánh đủ linh kiện ẩn</strong>
+        <span>Đối chiếu đầy đủ xi phông, van chữ T, dây cấp inox và con thỏ chống hôi trong cùng báo giá.</span>
+      </div>
+      <div class="bx-snap-card">
+        <strong>Nghiệm thu theo áp lực thật</strong>
+        <span>Kiểm tra độ kín khít của gioăng cao su non và tốc độ thoát nước chậu trước khi bàn giao.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="bx-layout">
+    <nav class="bx-toc" aria-label="Mục lục">
+      <div class="bx-toc-title">Nội dung bài viết</div>
+      <ol>
+        <li><a href="#thm-1-1">Xác định hạ tầng phòng tắm trước khi chọn gói</a></li>
+        <li><a href="#thm-1-2">Phân biệt nhóm thiết bị chính và phụ kiện đấu nối</a></li>
+        <li><a href="#thm-1-3">Đo mặt bằng và kiểm tra áp lực cột nước</a></li>
+        <li><a href="#thm-1-4">Lập ngân sách theo cả vòng đời vận hành</a></li>
+        <li><a href="#thm-1-5">Kiểm định cốt liệu men sứ Nano và Inox 304</a></li>
+        <li><a href="#thm-1-6">Lắp thử phòng mẫu đối với công trình nhiều phòng</a></li>
+        <li><a href="#thm-1-7">Nghiệm thu lắp đặt và xử lý sai số đường ống</a></li>
+        <li><a href="#thm-1-8">Mẫu thông số kỹ thuật gửi bộ phận báo giá</a></li>
+        <li><a href="#thm-1-9">Tình huống minh họa: chọn gói cho ba loại mặt bằng</a></li>
+        <li><a href="#thm-1-10">Câu hỏi thường gặp và checklist trước khi chốt</a></li>
+        <li><a href="#thm-1-11">Tổng kết và chuyên đề liên quan</a></li>
+      </ol>
+    </nav>
+
+    <div class="bx-chapters">
+      <section id="thm-1-1" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">01</span>
+          <h2>Xác định hạ tầng phòng tắm trước khi chọn gói</h2>
+        </div>
+        <p>Sai lầm phổ biến nhất khi mua thiết bị vệ sinh là chọn mẫu mã dựa trên hình ảnh phối cảnh mà bỏ qua hiện trạng đường ống cấp thoát nước đã chôn dưới sàn. Một mẫu bồn cầu 1 khối thân dài 720mm sẽ gây vướng cánh cửa nếu lắp trong phòng tắm dưới 2.8m², hoặc hệ sen cây bát lớn 250mm sẽ chỉ chảy nhỏ giọt nếu bồn nước đặt cách trần chưa tới 4 mét.</p>
+        <p>Do đó, bước đầu tiên không phải là đếm số lượng món trong gói khuyến mãi mà là lập hồ sơ rủi ro kỹ thuật của từng phòng tắm: khoảng cách từ tường gạch hoàn thiện đến tâm ống thoát sàn, vị trí đầu cấp nước sạch, độ dày tường gạch nơi dự kiến treo bàn đá lavabo và cao độ trần thạch cao.</p>
+        <p>Khi đã nắm rõ các giới hạn vật lý của mặt bằng, việc lọc ra cấu hình combo phù hợp sẽ diễn ra nhanh chóng và loại bỏ hoàn toàn chi phí đục phá sàn gạch hay đổi trả hàng cồng kềnh.</p>
+
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 1: Chọn cấu hình combo theo hiện trạng hạ tầng công trình</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Vấn đề hiện trạng</th>
+                <th>Phương án cấu hình cân nhắc</th>
+                <th>Điểm kỹ thuật cần xác nhận</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Diện tích hẹp dưới 3m², cửa mở vào trong</td>
+                <td>Combo dùng bồn cầu 1 khối thân gọn (&lt;660mm) + chậu treo hoặc tủ 50–60cm</td>
+                <td>Đo hành trình quét của cánh cửa và khoảng trống trước mũi bồn cầu ≥ 550mm</td>
+              </tr>
+              <tr>
+                <td>Phòng tắm tầng áp mái, áp lực nước yếu</td>
+                <td>Combo dùng sen tắm cầm tay tăng áp hoặc lắp bổ sung bơm tăng áp biến tần</td>
+                <td>Kiểm tra chiều cao từ đáy bồn chứa nước xuống củ sen (cần ≥ 8m cho sen cây)</td>
+              </tr>
+              <tr>
+                <td>Tường xây gạch ống 8cm tại vị trí lavabo</td>
+                <td>Combo dùng tủ chậu PVC có chân đứng hoặc gia cố khung sắt nở hóa chất</td>
+                <td>Tránh treo bàn đá 2 tầng nặng 45kg lên tường gạch rỗng bằng tắc kê nhựa thường</td>
+              </tr>
+              <tr>
+                <td>Nguồn nước máy nhiều cặn vôi hoặc hơi phèn</td>
+                <td>Combo ưu tiên sứ phủ men Nano tuyết và sen vòi 100% Inox SUS 304 xước mờ</td>
+                <td>Hạn chế bề mặt xi mạ mỏng dễ bị ố loang khi vệ sinh bằng dung dịch tẩy rửa</td>
+              </tr>
+              <tr>
+                <td>Căn hộ dịch vụ / nhà cho thuê tần suất cao</td>
+                <td>Combo 9 món tiêu chuẩn có linh kiện phao xả ABS và lõi van Ceramic phổ thông</td>
+                <td>Ưu tiên tính sẵn có của phụ tùng thay thế nhanh và khả năng chống bám bẩn</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bx-table-caption">Ghi chú: Thông số đối chiếu ở mức tham khảo kỹ thuật; cần đo thực tế sau khi đã ốp gạch tường và lát sàn.</div>
+        </div>
+      </section>
+
+      <section id="thm-1-2" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">02</span>
+          <h2>Phân biệt nhóm thiết bị chính và phụ kiện đấu nối</h2>
+        </div>
+        <p>Một gói combo thiết bị vệ sinh trọn bộ thường được giới thiệu gồm 9 món, 10 món hoặc 11 món. Để đánh giá chính xác giá trị sử dụng, người mua cần tách bạch danh mục này thành hai lớp: lớp thiết bị hiển thị chính (bồn cầu, chậu lavabo, bàn đá/tủ chậu, sen cây tắm đứng, gương soi) và lớp phụ kiện vận hành – đấu nối (vòi lavabo, bộ xả xi phông, vòi xịt, van chia chữ T, dây cấp, kệ phụ kiện).</p>
+        <p>Trong thực tế lắp đặt, sự cố rò rỉ nước âm ỉ dưới gầm tủ hay mùi hôi trào ngược hiếm khi xuất phát từ thân sứ bồn cầu, mà chủ yếu nằm ở nhóm phụ kiện đấu nối bị cắt giảm chất lượng. Một chiếc bầu xi phông nhựa mỏng hoặc sợi dây cấp vỏ nhôm rất dễ nứt vỡ khi áp lực nước chung cư tăng cao vào ban đêm.</p>
+        <p>Khi đặt trọn bộ từ cùng một hệ sinh thái sản phẩm như Navier, ưu điểm lớn nhất là độ tương thích cơ khí: chiều cao vòi lavabo đã được tính toán khớp với độ sâu lòng chậu đặt bàn, và đường kính rốn xả khớp khít với lỗ thoát đáy có tràn hoặc không tràn.</p>
+
+        <figure class="bx-figure">
+          <img src="https://thietbivesinhgiakho.vn/upload/product/836424671958_300x300.jpg" alt="Cấu hình combo trọn bộ thiết bị phòng tắm 9 món Navier CBPT0077" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption class="bx-figcap">Hình tham khảo: Tổ hợp gói 9 món gồm bồn cầu 1 khối, bàn đá, chậu lavabo đặt bàn, sen cây tắm đứng, gương và phụ kiện đồng bộ · Nguồn: Thiết Bị Vệ Sinh Giá Kho.</figcaption>
+        </figure>
+      </section>
+
+      <section id="thm-1-3" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">03</span>
+          <h2>Đo mặt bằng và kiểm tra áp lực cột nước</h2>
+        </div>
+        <p>Trước khi gửi yêu cầu báo giá, hãy dùng thước cuộn đo ba vị trí cốt lõi sau khi thợ xây đã hoàn thiện lớp gạch ốp lát. Thứ nhất là tâm thoát bồn cầu: đo vuông góc từ mặt gạch tường sau lưng đến tâm lỗ ống PVC dưới sàn (tiêu chuẩn là 300mm). Thứ hai là khoảng tường lắp bàn đá lavabo: đo chiều rộng thông thủy và cao độ ống thoát thải âm tường (tiêu chuẩn 500–520mm từ sàn).</p>
+        <p>Thứ ba là khu vực buồng tắm đứng: kiểm tra khoảng cách giữa hai đầu ren trong cấp nước nóng – lạnh âm tường (tiêu chuẩn 150mm ± 15mm, nóng bên trái, lạnh bên phải, cao cách sàn 850–950mm). Hai đầu ren này cần nằm phẳng với mặt gạch và thăng bằng theo thước thủy để khi vặn chân sen chữ Z không bị lệch cần sen đứng.</p>
+        <p>Đồng thời, hãy mở thử van nước tại đầu chờ củ sen để quan sát lưu lượng chảy tự nhiên. Nếu dòng nước yếu ở các tầng trên cùng, bạn nên thông báo trước để đơn vị cung cấp tư vấn mẫu bát sen có cấu trúc lỗ phun silikon tăng áp.</p>
+
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 2: Thông số kỹ thuật cần ghi nhận trước khi chốt mã gói combo</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nhóm hạng mục</th>
+                <th>Thông tin số đo cần có</th>
+                <th>Lý do kỹ thuật</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vị trí lắp Bồn cầu</td>
+                <td>Tâm thoát sàn (mm) và khoảng cách đến ổ điện (nếu có)</td>
+                <td>Đảm bảo lưng két nước sát tường đẹp mắt và lắp vừa con thỏ chống hôi</td>
+              </tr>
+              <tr>
+                <td>Vị trí quầy Lavabo</td>
+                <td>Chiều ngang tối đa (600 / 700 / 800mm) và cao độ ống thoát</td>
+                <td>Chọn kích thước bàn đá hoặc tủ chậu không cấn khung bao cửa phòng tắm</td>
+              </tr>
+              <tr>
+                <td>Khu vực Sen cây tắm</td>
+                <td>Khoảng cách 2 tim ống nóng lạnh (150mm) và chiều cao trần</td>
+                <td>Đảm bảo cần sen đứng điều chỉnh tới 2.1m không đụng trần hoặc vướng dầm</td>
+              </tr>
+              <tr>
+                <td>Áp lực nguồn nước</td>
+                <td>Chiều cao bồn nước mái hoặc công suất bơm tăng áp hiện hữu</td>
+                <td>Quyết định chọn bát sen mưa khổ lớn hay dòng sen tay trợ lực áp suất thấp</td>
+              </tr>
+              <tr>
+                <td>Kết cấu tường treo</td>
+                <td>Tường gạch đặc, gạch ống 8cm hay vách thạch cao chống ẩm</td>
+                <td>Chọn phương án consol sắt chịu lực cho bàn đá hoặc tủ chậu chân đứng</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bx-table-caption">Ghi chú: Luôn đo sau khi đã ốp gạch tường; nếu chưa ốp gạch cần trừ hao 15–20mm lớp vữa và gạch.</div>
+        </div>
+
+        <div class="bx-note">
+          <strong>Tham khảo cấu hình và quy cách các gói thực tế</strong>
+          Khi đã có bộ số đo mặt bằng cơ bản, bạn có thể đối chiếu danh sách linh kiện chi tiết, kích thước từng thiết bị và phương án ghép bộ tại danh mục <a href="https://thietbivesinhgiakho.vn/combo.html" target="_blank" rel="noopener">combo thiết bị vệ sinh</a> để chọn cấu hình phù hợp với diện tích và ngân sách công trình.
+        </div>
+      </section>
+
+      <section id="thm-1-4" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">04</span>
+          <h2>Lập ngân sách theo cả vòng đời vận hành</h2>
+        </div>
+        <p>Khi so sánh hai bảng báo giá combo có cùng số lượng 9 hoặc 11 món, mức chênh lệch giá thường không chỉ nằm ở kiểu dáng bên ngoài mà nằm ở chi phí vận hành trong 5 đến 10 năm tiếp theo. Một bộ bồn cầu có bộ xả 2 chế độ 3L/6L chuẩn xác kết hợp phao cấp ABS bền bỉ giúp một gia đình 4 người tiết kiệm hàng chục mét khối nước sạch mỗi năm so với loại phao rẻ tiền hay bị rò nước ngầm vào lòng bồn.</p>
+        <p>Bên cạnh đó, chi phí nhân công sửa chữa điện nước khi phải tháo dỡ một củ sen âm tường bị gãy ren hoặc thay bộ xi phông rò rỉ thường tốn kém hơn nhiều so với khoản chênh lệch ban đầu để đầu tư thân vòi Inox SUS 304 chuẩn và bộ xả đồng thau.</p>
+        <p>Vì vậy, phương pháp lập ngân sách an toàn là chia tổng mức đầu tư theo tần suất sử dụng: ưu tiên cấu hình cao cấp cho các phòng tắm sử dụng liên tục hàng ngày và dùng gói tiêu chuẩn đồng bộ cho phòng vệ sinh khách ở tầng trệt.</p>
+      </section>
+
+      <section id="thm-1-5" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">05</span>
+          <h2>Kiểm định cốt liệu men sứ Nano và Inox 304</h2>
+        </div>
+        <p>Tại showroom trưng bày, người mua hoàn toàn có thể tự kiểm tra chất lượng cốt liệu bằng những thao tác trực quan. Đối với bồn cầu và chậu rửa mặt lavabo, hãy quan sát độ phản chiếu ánh đèn trên bề mặt men: lớp men sứ Nano nung ở 1280°C có độ bóng sâu, bề mặt láng mịn như kính và khi luồn tay vào vành xả hoặc cổ ngỗng thoát thải bên dưới không bị gai nhám.</p>
+        <p>Đối với sen cây tắm đứng và vòi lavabo, hãy kiểm tra trọng lượng thực của củ sen và độ mượt của tay gạt. Củ sen sử dụng lõi van đĩa sứ Alumina Ceramic khi đóng mở sẽ có cảm giác đầm, khít và không có độ rơ lỏng lẻo ở khớp nối.</p>
+        <p>Nếu gói combo bao gồm bàn đá hai tầng hoặc tủ chậu, hãy kiểm tra mặt cắt của tấm nhựa PVC (phải đặc ruột, cứng chắc) và hệ khung giá đỡ inox đi kèm để đảm bảo khả năng chịu tải lâu dài trong môi trường độ ẩm trên 85%.</p>
+
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 3: Các khoản mục chất lượng cần làm rõ giữa các gói thiết bị</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Khoản mục thiết bị</th>
+                <th>Điểm kỹ thuật cần làm rõ</th>
+                <th>Thời điểm kiểm tra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Thân sứ &amp; Men bồn cầu</td>
+                <td>Cơ chế xả xoáy Siphon/Tornado và cam kết bảo hành men sứ 10 năm</td>
+                <td>Khi xem mẫu tại showroom</td>
+              </tr>
+              <tr>
+                <td>Củ sen &amp; Thân ống sen cây</td>
+                <td>Chất liệu Inox SUS 304 hay đồng thau, lõi van Ceramic chịu nhiệt</td>
+                <td>Khi chốt cấu hình báo giá</td>
+              </tr>
+              <tr>
+                <td>Bàn đá &amp; Giá đỡ Consol</td>
+                <td>Đá chống trầy khoét sẵn lỗ + cặp giá đỡ chịu lực và tắc kê sắt</td>
+                <td>Trước khi giao hàng tới công trình</td>
+              </tr>
+              <tr>
+                <td>Bộ phụ kiện đấu nối</td>
+                <td>Gioăng cao su non bồn cầu, bộ xả xi phông chậu, dây cấp, van T</td>
+                <td>Khi mở kiện kiểm đếm nhận hàng</td>
+              </tr>
+              <tr>
+                <td>Nắp bồn cầu &amp; Bản lề</td>
+                <td>Nhựa PP/UF nguyên sinh chống ố, chốt tháo nhanh và cơ chế đóng êm</td>
+                <td>Khi nghiệm thu hoàn thiện lắp đặt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="bx-figure">
+          <img src="https://thietbivesinhgiakho.vn/upload/product/929997851658_300x300.jpg" alt="Cấu hình combo 11 món Navier CBPT0014 kèm bàn đá hai tầng và phụ kiện Inox 304" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption class="bx-figcap">Hình tham khảo: Cấu hình gói 11 món nâng cấp bàn đá hai tầng chống trầy và bộ phụ kiện treo tường Inox 304 · Nguồn: Thiết Bị Vệ Sinh Giá Kho.</figcaption>
+        </figure>
+      </section>
+
+      <section id="thm-1-6" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">06</span>
+          <h2>Lắp thử phòng mẫu đối với công trình nhiều phòng</h2>
+        </div>
+        <p>Đối với các chủ đầu tư xây dựng dãy căn hộ dịch vụ, khách sạn mini hoặc nhà phố có từ 4 đến 10 phòng tắm trở lên, quy tắc an toàn nhất là yêu cầu giao trước hoặc mở lắp thử hoàn chỉnh cho 1 phòng tắm mẫu tiêu chuẩn.</p>
+        <p>Quá trình lắp phòng mẫu giúp đội thợ điện nước xác nhận chính xác cao độ khung bàn đá, chiều dài dây cấp cần thiết và thử nghiệm thực tế lực xả của bồn cầu cũng như độ phủ tia nước của bát sen cây dưới áp lực nước thực của tòa nhà.</p>
+        <p>Sau khi phòng mẫu vận hành trơn tru, chủ đầu tư mới khóa thông số chiều cao khoan lỗ cho toàn bộ các phòng còn lại, giúp tiến độ lắp đặt đồng loạt nhanh gấp đôi và không xảy ra lỗi khoan lệch gạch ốp.</p>
+      </section>
+
+      <section id="thm-1-7" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">07</span>
+          <h2>Nghiệm thu lắp đặt và xử lý sai số đường ống</h2>
+        </div>
+        <p>Khi thợ tiến hành lắp đặt gói combo, có hai khâu kỹ thuật bắt buộc phải giám sát trực tiếp. Thứ nhất là xả sạch cặn đường ống âm tường: trước khi vặn dây cấp vào van phao bồn cầu và củ sen, phải mở van tổng xả nước tự do khoảng 2 phút để đẩy hết cát xây dựng, mạt gạch và keo PVC dư ra ngoài. Nếu bỏ qua bước này, hạt cát sẽ kẹt ngay vào màng lọc van phao và đĩa gốm Ceramic gây rỉ nước.</p>
+        <p>Thứ hai là lắp đặt gioăng cao su non (con thỏ chống hôi) dưới đế bồn cầu: miệng ống thoát PVC dưới sàn nên chừa cao hơn mặt gạch khoảng 5–8mm để vòng cao su non ép khít hoàn toàn giữa cổ thoát sứ và thành ống, ngăn triệt để mùi hôi và nước thải thấm ra sàn.</p>
+        <p>Cuối cùng, chỉ sử dụng keo silicone trung tính chuyên dụng chống nấm mốc để miết viền chân bồn cầu và viền chậu lavabo sau khi bề mặt gạch đã được lau khô hoàn toàn.</p>
+
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 4: Mẫu biên bản nghiệm thu lắp đặt combo thiết bị phòng tắm</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Tiêu chí nghiệm thu</th>
+                <th>Cách kiểm tra thực tế tại hiện trường</th>
+                <th>Tiêu chuẩn đạt yêu cầu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lực xả &amp; Phao ngắt bồn cầu</td>
+                <td>Nhấn xả thử cả 2 nút 3L/6L kèm giấy vệ sinh; chờ két nước nạp đầy</td>
+                <td>Cuốn sạch trong 1 lần xả, phao ngắt dứt khoát không rỉ nước vào lòng bồn</td>
+              </tr>
+              <tr>
+                <td>Độ kín mùi chân đế bồn cầu</td>
+                <td>Kiểm tra việc lắp gioăng cao su non và đường keo silicone quanh đế</td>
+                <td>Bồn cầu đứng vững không cập kênh, không rò nước hay mùi hôi quanh chân</td>
+              </tr>
+              <tr>
+                <td>Hệ thống thoát xi phông chậu</td>
+                <td>Xả đầy nước vào lòng lavabo rồi mở nút nhấn thoát tối đa</td>
+                <td>Nước rút nhanh, lấy giấy khô lau thử các khớp ren dưới gầm không ẩm ướt</td>
+              </tr>
+              <tr>
+                <td>Củ sen &amp; Cần sen cây đứng</td>
+                <td>Gạt thử chiều nóng – lạnh và van chuyển hướng bát trần / tay sen</td>
+                <td>Trái nóng – phải lạnh chuẩn xác, các khớp nối chân chữ Z không rỉ giọt</td>
+              </tr>
+              <tr>
+                <td>Độ chắc chắn của bàn đá</td>
+                <td>Ấn kiểm tra độ rung lắc tại hai góc ngoài của bàn đá lavabo</td>
+                <td>Khung consol bắt chặt vào tường gạch, bàn đá cân bằng theo thước thủy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="thm-1-8" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">08</span>
+          <h2>Mẫu thông số kỹ thuật gửi bộ phận báo giá</h2>
+        </div>
+        <p>Để nhận được phương án cấu hình combo chính xác ngay từ lần tư vấn đầu tiên, bạn nên gửi kèm 5 thông tin tóm tắt: (1) Số lượng phòng tắm và diện tích từng phòng; (2) Khoảng cách tâm thoát sàn bồn cầu thực tế đo từ mặt gạch tường; (3) Chiều ngang tối đa khu vực đặt bàn đá lavabo; (4) Nguồn nước cấp đã có đường nước nóng chờ sẵn hay chưa và bồn nước cao mấy tầng; (5) Nhu cầu ưu tiên bàn đá hai tầng hay tủ chậu PVC có ngăn chứa đồ.</p>
+        <p>Việc chuẩn hóa thông tin đầu vào giúp bộ phận kỹ thuật tại kho kiểm tra ngay độ tương thích của từng mã chậu, kiểu vòi và bộ xả đi kèm, đồng thời tối ưu phương án đóng kiện giao hàng một lần đến chân công trình.</p>
+      </section>
+
+      <section id="thm-1-9" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">09</span>
+          <h2>Tình huống minh họa: chọn gói cho ba loại mặt bằng</h2>
+        </div>
+        <p><strong>Trường hợp 1 – Phòng tắm căn hộ chung cư 3.8m²:</strong> Mặt bằng đã phân khu khô và khu tắm kính riêng, áp lực nước tòa nhà đạt 2.2 bar rất mạnh. Phương án tối ưu là gói Combo 11 món gồm bồn cầu 1 khối xả xoáy, bàn đá 2 tầng 800×500mm kèm chậu đặt bàn viền đen, sen cây tắm đứng Inox 304 bát vuông và gương LED cảm ứng.</p>
+        <p><strong>Trường hợp 2 – Phòng vệ sinh dưới gầm cầu thang nhà phố 2.2m²:</strong> Chiều ngang hẹp và trần nghiêng thấp. Phương án phù hợp là gói Combo tinh gọn gồm bồn cầu 1 khối thân ngắn 640mm, chậu lavabo góc hoặc chậu treo tường nhỏ gọn kết hợp vòi tắm sen tay kiêm vòi chậu để tiết kiệm tối đa không gian đứng.</p>
+        <p><strong>Trường hợp 3 – Dãy 12 phòng căn hộ dịch vụ cho thuê:</strong> Yêu cầu độ bền cơ học cao và chi phí đầu tư thu hồi vốn nhanh. Chủ đầu tư chọn đồng bộ 12 gói Combo 9 món Navier sử dụng toàn bộ sen vòi và phụ kiện bằng Inox SUS 304 xước mờ không bong tróc, giúp giảm tối đa chi phí bảo trì thay thế trong 5 năm đầu khai thác.</p>
+      </section>
+
+      <section id="thm-1-10" class="bx-chapter">
+        <div class="bx-chapter-head">
+          <span class="bx-num">10</span>
+          <h2>Câu hỏi thường gặp và checklist trước khi chốt</h2>
+        </div>
+        <div class="bx-faq">
+          <details open>
+            <summary>Mua theo gói combo có được đổi mẫu chậu lavabo hoặc màu bàn đá không?</summary>
+            <p>Tại kho phân phối, khách hàng hoàn toàn có thể linh hoạt đổi kiểu dáng chậu rửa mặt (tròn, chữ nhật, viền đen) hoặc chọn màu bàn đá (trắng vân mây, đen, xám) cho hợp với màu gạch ốp tường mà vẫn giữ nguyên mức chiết khấu theo gói combo.</p>
+          </details>
+          <details>
+            <summary>Nếu tâm thoát sàn ở nhà thợ đặt lệch thành 250mm hoặc 350mm thì lắp bồn cầu 1 khối trong combo thế nào?</summary>
+            <p>Nếu lệch nhẹ trong khoảng 285–315mm, thợ có thể dùng con thỏ chuyển tâm chuyên dụng để điều chỉnh. Nếu tâm thoát chỉ có 200–250mm, bạn nên báo trước cho kỹ thuật viên để đổi sang mã bồn cầu có thiết kế khoang thoát gầm tương thích để lưng két nước không bị cấn tường.</p>
+          </details>
+          <details>
+            <summary>Chế độ bảo hành của gói combo được áp dụng như thế nào?</summary>
+            <p>Mỗi thiết bị trong gói combo đều hưởng chính sách bảo hành chính hãng riêng biệt theo nhóm vật liệu: phần men sứ bồn cầu và chậu lavabo bảo hành lên đến 10 năm; bộ xả, củ sen nóng lạnh và phụ kiện được bảo hành kỹ thuật theo đúng quy định của hãng.</p>
+          </details>
+        </div>
+
+        <div class="bx-check">
+          <h3>Checklist trước khi xác nhận đặt giao combo thiết bị vệ sinh</h3>
+          <div class="bx-check-grid">
+            <label><input type="checkbox"><span>Đã đo tâm thoát sàn bồn cầu thực tế sau khi ốp gạch tường (chuẩn 300mm).</span></label>
+            <label><input type="checkbox"><span>Đã kiểm tra chiều rộng vị trí lắp bàn đá lavabo không cấn cánh cửa mở.</span></label>
+            <label><input type="checkbox"><span>Đã xác nhận khoảng cách 2 đầu ren cấp nước nóng – lạnh sen tắm đạt 150mm.</span></label>
+            <label><input type="checkbox"><span>Đã kiểm tra cột áp nước từ bồn mái (≥ 8m) hoặc chuẩn bị phương án bơm tăng áp.</span></label>
+            <label><input type="checkbox"><span>Đã rà soát báo giá có đủ xi phông, dây cấp, van chữ T, giá đỡ bàn đá và gioăng cao su.</span></label>
+            <label><input type="checkbox"><span>Đã nhắc đội thợ xả sạch cát cặn trong ống âm tường trước khi đấu nối thiết bị.</span></label>
+          </div>
+        </div>
+      </section>
+
+      <section id="thm-1-11" class="bx-chapter" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <div class="bx-chapter-head">
+          <span class="bx-num">11</span>
+          <h2>Tổng kết và chuyên đề liên quan</h2>
+        </div>
+        <div class="bx-end">
+          <h2>Chốt cấu hình dựa trên số đo thực tế tại công trình</h2>
+          <p>Một bộ combo thiết bị vệ sinh phát huy tối đa giá trị tiết kiệm khi từng món trong gói ăn khớp hoàn toàn với đường ống cấp thoát nước và thói quen sinh hoạt của gia đình. Hãy luôn kết hợp bảng thông số mặt bằng với quy trình nghiệm thu thử nước tại chỗ trước khi hoàn tất bàn giao.</p>
+        </div>
+
+        <h3 style="font-family:Georgia,'Times New Roman',serif;font-size:19px;color:var(--bx-ink);margin:24px 0 12px;">Đọc thêm trong sổ tay kỹ thuật thiết bị phòng tắm</h3>
+        <div class="bx-related">
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/bon-cau-1-khoi-tieu-chuan-tam-thoat" target="_blank" rel="noopener">
+            <strong>Bồn cầu 1 khối và chuẩn tâm thoát 300mm</strong>
+            <span>Cách đo khoảng cách ống thoát sàn, phân biệt xả xoáy Siphon Jet và kiểm tra lớp men Nano trong lòng ống.</span>
+          </a>
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/bon-cau-thong-minh-lap-dat-dien-nuoc" target="_blank" rel="noopener">
+            <strong>Bồn cầu thông minh nắp rửa điện tử: Quy chuẩn điện nước</strong>
+            <span>Tiêu chuẩn ổ cắm chống ẩm IPX4, áp lực nước tối thiểu cho vòi rửa tự động và cách bảo trì cảm biến radar.</span>
+          </a>
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/chau-rua-mat-lavabo-tu-chau-pvc" target="_blank" rel="noopener">
+            <strong>Chậu rửa mặt lavabo đặt bàn và tủ chậu nhựa PVC</strong>
+            <span>Cách tính cao độ mặt bàn đá 680–700mm cho chậu đặt nổi và kiểm định cốt nhựa PVC đặc chống nước.</span>
+          </a>
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/sen-cay-tam-dung-inox-304-ap-luc-nuoc" target="_blank" rel="noopener">
+            <strong>Sen cây tắm đứng Inox 304 và bài toán áp lực nước</strong>
+            <span>Cách kiểm tra thân vòi SUS 304, lõi van đĩa sứ Ceramic và xử lý tình trạng bát sen trần chảy yếu.</span>
+          </a>
+        </div>
+
+        <p class="bx-credits">Ảnh tham khảo: Thiết Bị Vệ Sinh Giá Kho. Bài viết hướng dẫn khảo sát mặt bằng và kiểm tra kỹ thuật lắp đặt; quy cách linh kiện, kích thước và báo giá chi tiết cần xác nhận theo từng mã sản phẩm thực tế.</p>
+      </section>
+    </div>
+  </div>
+</article>
+</body>
+</html>

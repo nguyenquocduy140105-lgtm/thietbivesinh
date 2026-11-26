@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bồn cầu 1 khối và chuẩn tâm thoát 300mm: Cách đo và kiểm tra men sứ</title>
+<style>
+  .bx-premium, .bx-premium * { box-sizing: border-box; }
+  .bx-premium {
+    --bx-ink: #202d2e;
+    --bx-deep: #133335;
+    --bx-deep2: #0c2325;
+    --bx-teal: #237070;
+    --bx-moss: #d1e5dc;
+    --bx-gold: #c6a46c;
+    --bx-sand: #f6f2ea;
+    --bx-line: #e0e9e4;
+    --bx-body: #4a5655;
+    max-width: 1060px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: var(--bx-body);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.88;
+    padding: 18px 16px 42px;
+  }
+  .bx-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; background: var(--bx-deep2); color: #ffffff; border-radius: 14px; padding: 34px 32px; align-items: center; }
+  .bx-eyebrow { display: inline-block; color: #d7bb82; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 12px; }
+  .bx-hero h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.28; color: #ffffff; margin: 0 0 14px; font-weight: 700; }
+  .bx-hero-desc { color: rgba(255, 255, 255, 0.84); font-size: 15.5px; line-height: 1.75; margin: 0; }
+  .bx-hero-photo { margin: 0; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(198, 164, 108, 0.35); border-radius: 12px; overflow: hidden; }
+  .bx-hero-photo img { width: 100%; height: 270px; object-fit: contain; display: block; background: #ffffff; padding: 10px; }
+  .bx-photo-ribbon { padding: 10px 14px; font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.75); background: rgba(8, 22, 24, 0.78); }
+  .bx-intro { background: #f6f8f5; border: 1px solid var(--bx-line); border-radius: 12px; padding: 24px 26px; margin-top: 18px; }
+  .bx-intro > p { margin: 0 0 18px; color: var(--bx-ink); }
+  .bx-snapshot { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .bx-snap-card { background: #ffffff; border: 1px solid var(--bx-line); border-left: 3px solid var(--bx-gold); border-radius: 8px; padding: 14px 16px; }
+  .bx-snap-card strong { display: block; color: var(--bx-ink); font-size: 14.5px; margin-bottom: 4px; }
+  .bx-snap-card span { font-size: 13.5px; line-height: 1.6; color: var(--bx-body); }
+  .bx-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 36px; margin-top: 34px; align-items: start; }
+  .bx-toc { position: sticky; top: 18px; background: var(--bx-sand); border: 1px solid var(--bx-line); border-radius: 12px; padding: 18px 16px; }
+  .bx-toc-title { font-family: Georgia, 'Times New Roman', serif; font-size: 15px; font-weight: 700; color: var(--bx-deep); margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(19, 51, 53, 0.14); }
+  .bx-toc ol { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.55; }
+  .bx-toc li { margin-bottom: 8px; }
+  .bx-toc a { color: var(--bx-ink); text-decoration: none; }
+  .bx-toc a:hover { color: var(--bx-teal); text-decoration: underline; }
+  .bx-chapter { padding-bottom: 28px; margin-bottom: 32px; border-bottom: 1px solid var(--bx-line); }
+  .bx-chapter-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
+  .bx-num { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 700; color: var(--bx-gold); line-height: 1; flex-shrink: 0; }
+  .bx-chapter h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 23px; line-height: 1.35; color: var(--bx-ink); margin: 0; }
+  .bx-chapter p { margin: 0 0 15px; }
+  .bx-table-block { margin: 22px 0; border: 1px solid var(--bx-line); border-radius: 10px; overflow-x: auto; background: #ffffff; }
+  .bx-table-title { background: #f0f5f2; padding: 10px 16px; font-weight: 700; font-size: 14px; color: var(--bx-deep); border-bottom: 1px solid var(--bx-line); }
+  .bx-table-block table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; line-height: 1.6; }
+  .bx-table-block th { background: var(--bx-deep); color: #ffffff; text-align: left; padding: 11px 14px; font-weight: 700; }
+  .bx-table-block td { padding: 11px 14px; border-bottom: 1px solid var(--bx-line); vertical-align: top; }
+  .bx-table-block tr:nth-child(even) td { background: #fafcfb; }
+  .bx-table-caption { padding: 8px 14px; font-size: 12px; color: #6c7a78; background: #f8faf9; }
+  .bx-figure { margin: 22px 0; border: 1px solid var(--bx-line); border-radius: 12px; overflow: hidden; background: #ffffff; }
+  .bx-figure img { width: 100%; max-height: 360px; object-fit: contain; display: block; padding: 12px; background: #ffffff; }
+  .bx-figcap { padding: 10px 16px; font-size: 12.5px; color: #5e6d6b; background: #f6f8f5; border-top: 1px solid var(--bx-line); }
+  .bx-note { background: #f3f8f5; border: 1px solid #c9ddd3; border-left: 4px solid var(--bx-teal); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .bx-note strong { display: block; color: var(--bx-deep); margin-bottom: 6px; }
+  .bx-note a { color: var(--bx-teal); font-weight: 700; text-decoration: underline; }
+  .bx-faq details { background: #fafcfb; border: 1px solid var(--bx-line); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  .bx-faq summary { font-weight: 700; color: var(--bx-ink); cursor: pointer; }
+  .bx-faq details p { margin: 10px 0 0; font-size: 15px; }
+  .bx-check { background: var(--bx-sand); border: 1px solid var(--bx-line); border-radius: 12px; padding: 20px 22px; margin-top: 22px; }
+  .bx-check h3 { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: var(--bx-deep); margin: 0 0 14px; }
+  .bx-check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .bx-check label { display: flex; align-items: flex-start; gap: 10px; background: #ffffff; border: 1px solid var(--bx-line); border-radius: 8px; padding: 11px 13px; font-size: 14px; line-height: 1.5; cursor: pointer; }
+  .bx-check input[type="checkbox"] { margin-top: 3px; accent-color: var(--bx-teal); }
+  .bx-check input[type="checkbox"]:checked + span { text-decoration: line-through; opacity: 0.6; }
+  .bx-end { background: linear-gradient(135deg, #173b3e, #244f4c); color: #ffffff; border-radius: 12px; padding: 26px 28px; margin: 20px 0 26px; }
+  .bx-end h2 { color: #ffffff; font-size: 22px; margin: 0 0 10px; }
+  .bx-end p { margin: 0; color: rgba(255, 255, 255, 0.88); }
+  .bx-related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+  .bx-related-card { display: block; background: #f8faf9; border: 1px solid var(--bx-line); border-radius: 10px; padding: 15px 17px; text-decoration: none; color: var(--bx-ink); }
+  .bx-related-card strong { display: block; color: var(--bx-deep); font-size: 15px; margin-bottom: 5px; }
+  .bx-related-card span { font-size: 13.5px; color: var(--bx-body); line-height: 1.55; display: block; }
+  .bx-credits { font-size: 12px; color: #71807e; border-top: 1px solid var(--bx-line); padding-top: 14px; margin-top: 28px; }
+  @media (max-width: 780px) { .bx-hero, .bx-snapshot, .bx-layout, .bx-check-grid, .bx-related { grid-template-columns: 1fr; } .bx-toc { position: static; } }
+</style>
+</head>
+<body>
+<article class="bx-premium">
+  <header class="bx-hero">
+    <div class="bx-hero-copy">
+      <span class="bx-eyebrow">Sổ tay kỹ thuật sứ vệ sinh</span>
+      <h1>Bồn cầu 1 khối và chuẩn tâm thoát 300mm: Cách đo và kiểm tra men sứ</h1>
+      <p class="bx-hero-desc">Hướng dẫn xác định tâm thoát sàn sau ốp gạch, so sánh cơ chế xả xoáy Siphon Jet và quy trình lắp đặt gioăng cao su non chống mùi.</p>
+    </div>
+    <figure class="bx-hero-photo">
+      <img src="https://thietbivesinhgiakho.vn/upload/product/025535193416_300x300.jpg" alt="Mẫu bồn cầu 1 khối Navier NV-1046 tráng men Nano" loading="eager" referrerpolicy="no-referrer">
+      <figcaption class="bx-photo-ribbon">Minh họa cấu trúc thân sứ đúc liền khối không khe nối · Nguồn: Thiết Bị Vệ Sinh Giá Kho. Chỉ dùng minh họa kỹ thuật.</figcaption>
+    </figure>
+  </header>
+
+  <section class="bx-intro" aria-label="Tóm tắt định hướng">
+    <p>Bồn cầu 1 khối (One-piece Toilet) có két nước và bệ ngồi đúc liền thành một thể thống nhất, giúp triệt tiêu khe bám bẩn và tăng tính thẩm mỹ cho phòng tắm hiện đại. Tuy nhiên, vì thân sứ cố định nên dòng sản phẩm này đòi hỏi độ chính xác cao về khoảng cách tâm ống thoát sàn và quy trình lắp đặt con thỏ chống hôi.</p>
+    <div class="bx-snapshot">
+      <div class="bx-snap-card">
+        <strong>Đo tâm thoát sau ốp gạch</strong>
+        <span>Khoảng cách 300mm tiêu chuẩn luôn tính từ bề mặt gạch ốp tường hoàn thiện đến tâm ống PVC.</span>
+      </div>
+      <div class="bx-snap-card">
+        <strong>Kiểm tra tráng men cổ ngỗng</strong>
+        <span>Lòng ống thoát thải được phủ men trơn giúp dòng xả Siphon đẩy chất thải không bám cặn.</span>
+      </div>
+      <div class="bx-snap-card">
+        <strong>Định vị bằng gioăng cao su non</strong>
+        <span>Không nhồi cứng xi măng vào bụng rỗng thân sứ để tránh nứt nhiệt và rò mùi khí ga.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="bx-layout">
+    <nav class="bx-toc" aria-label="Mục lục">
+      <div class="bx-toc-title">Nội dung bài viết</div>
+      <ol>
+        <li><a href="#thm-2-1">Khác biệt kết cấu giữa bồn cầu 1 khối và 2 khối</a></li>
+        <li><a href="#thm-2-2">Cách đo chuẩn tâm thoát sàn 300mm tại công trình</a></li>
+        <li><a href="#thm-2-3">So sánh cơ chế xả xoáy Siphon Jet và Rimless</a></li>
+        <li><a href="#thm-2-4">Tiêu chuẩn xương sứ nung 1280°C và men Nano</a></li>
+        <li><a href="#thm-2-5">Cấu tạo bộ xả 2 nhấn ABS và nắp đóng êm</a></li>
+        <li><a href="#thm-2-6">Xử lý khi tâm ống thoát bị lệch 250mm hoặc 350mm</a></li>
+        <li><a href="#thm-2-7">Quy trình lắp đặt gioăng cao su non chống hôi</a></li>
+        <li><a href="#thm-2-8">Các thông số cần kiểm tra khi nhận hàng</a></li>
+        <li><a href="#thm-2-9">Ba tình huống chọn kích thước thân bồn cầu</a></li>
+        <li><a href="#thm-2-10">Câu hỏi thường gặp và checklist nghiệm thu</a></li>
+        <li><a href="#thm-2-11">Tổng kết và bài viết liên quan</a></li>
+      </ol>
+    </nav>
+
+    <div class="bx-chapters">
+      <section id="thm-2-1" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">01</span><h2>Khác biệt kết cấu giữa bồn cầu 1 khối và 2 khối</h2></div>
+        <p>Ở dòng bồn cầu 2 khối truyền thống, két chứa nước và thân bệ ngồi được đúc rời rồi liên kết với nhau bằng cặp bu lông kim loại và vòng đệm cao su. Sau khoảng 3–5 năm sử dụng, vòng đệm này có thể bị lão hóa gây rỉ nước hoặc tích tụ vệt ố vàng ngay khe tiếp giáp rất khó vệ sinh.</p>
+        <p>Ngược lại, bồn cầu 1 khối được đúc nguyên khối từ đất sét trắng và thạch anh trong một khuôn duy nhất trước khi đưa vào lò nung. Thiết kế liền lạc giúp loại bỏ hoàn toàn nguy cơ rò nước giữa két và thân, đồng thời rút ngắn thời gian lau chùi bề mặt bên ngoài chỉ còn vài chục giây.</p>
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 1: Đối chiếu đặc tính kỹ thuật bồn cầu 1 khối và 2 khối</div>
+          <table>
+            <thead><tr><th>Tiêu chí kỹ thuật</th><th>Bồn cầu 1 khối (Liền khối)</th><th>Bồn cầu 2 khối (Két rời)</th></tr></thead>
+            <tbody>
+              <tr><td>Kết cấu thân sứ</td><td>Đúc liền két nước và bệ ngồi, không khe hở</td><td>Két nước lắp rời lên thân bằng ốc và gioăng</td></tr>
+              <tr><td>Cơ chế xả phổ biến</td><td>Xả xoáy Siphon Jet / Tornado êm và hút mạnh</td><td>Xả thẳng (Washdown) hoặc Siphon cơ bản</td></tr>
+              <tr><td>Trọng lượng trung bình</td><td>42 – 52 kg (đầm chắc, ổn định cao)</td><td>28 – 35 kg (nhẹ, dễ khuân vác cầu thang hẹp)</td></tr>
+              <tr><td>Vệ sinh bề mặt</td><td>Lau phẳng toàn thân, không đọng bụi khe kẽ</td><td>Cần vệ sinh kỹ khe nối giữa két và bệ ngồi</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="thm-2-2" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">02</span><h2>Cách đo chuẩn tâm thoát sàn 300mm tại công trình</h2></div>
+        <p>Tâm thoát sàn (Rough-in) là khoảng cách từ mặt tường phía sau lưng bồn cầu đến chính giữa tâm lỗ ống PVC thoát chất thải dưới sàn. Chuẩn thông dụng nhất tại Việt Nam là 300mm (hoặc 400mm đối với một số mẫu nhập khẩu đặc thù).</p>
+        <p>Lưu ý quan trọng cho đội thợ điện nước: khi đi ống âm sàn ở giai đoạn xây thô chưa trát tường và chưa ốp gạch, phải đặt tâm ống cách tường gạch thô khoảng 315–320mm. Sau khi trát vữa và ốp gạch tường dày 15–20mm, khoảng cách còn lại sẽ vừa tròn 300mm.</p>
+        <figure class="bx-figure">
+          <img src="https://thietbivesinhgiakho.vn/thumb/580x180/1/upload/product/806356406709/bon-cau.png" alt="Minh họa các kiểu dáng bồn cầu 1 khối chuẩn tâm thoát 300mm" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption class="bx-figcap">Hình tham khảo: Các biến thể kích thước thân bồn cầu 1 khối tương thích chuẩn tâm thoát 300mm · Nguồn: Thiết Bị Vệ Sinh Giá Kho.</figcaption>
+        </figure>
+      </section>
+
+      <section id="thm-2-3" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">03</span><h2>So sánh cơ chế xả xoáy Siphon Jet và Rimless</h2></div>
+        <p>Hiệu suất xả sạch và độ ồn của bồn cầu 1 khối phụ thuộc vào thiết kế đường dẫn nước và hình học của ống thoát chữ S (Siphon). Hệ xả Siphon Jet kết hợp hai dòng nước: một dòng xoáy tròn quanh lòng bồn để rửa trôi bề mặt và một lỗ đẩy phụ (Jet) dưới đáy tạo lực hút chân không kéo toàn bộ chất thải qua cổ ngỗng một cách êm ái.</p>
+        <p>Trong khi đó, thiết kế vành Rimless (không vành khuất) loại bỏ phần gờ rỗng truyền thống quanh miệng bồn cầu, giúp bàn chải tiếp cận 100% diện tích lòng bồn và không còn nơi trú ẩn của vi khuẩn.</p>
+        <div class="bx-table-block">
+          <div class="bx-table-title">Bảng 2: Thông số đường ống và áp lực xả tiêu chuẩn</div>
+          <table>
+            <thead><tr><th>Thông số</th><th>Giá trị tiêu chuẩn</th><th>Mục đích kỹ thuật</th></tr></thead>
+            <tbody>
+              <tr><td>Đường kính ống thoát sàn PVC</td><td>Ø114 mm (tối thiểu Ø90 mm)</td><td>Đảm bảo lưu lượng thoát tức thời, không nghẹt giấy</td></tr>
+              <tr><td>Đường kính cổ ngỗng thân sứ</td><td>48 – 55 mm tráng men toàn phần</td><td>Tạo hiệu ứng Siphon hút chân không mạnh và trơn</td></tr>
+              <tr><td>Mực nước chờ (Water Seal)</td><td>Chiều cao cột nước ≥ 50 mm</td><td>Ngăn hoàn toàn khí metan và mùi hôi từ hầm tự hoại</td></tr>
+              <tr><td>Lượng nước 2 chế độ xả</td><td>3.0 Lít (xả tiểu) / 6.0 Lít (xả đại)</td><td>Tiết kiệm 35% lượng nước sinh hoạt hàng tháng</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bx-note">
+          <strong>Tra cứu kích thước và bản vẽ kỹ thuật từng mẫu</strong>
+          Để đối chiếu chiều dài, chiều rộng thân sứ và kiểu vành xả xoáy phù hợp với diện tích phòng tắm gia đình, bạn có thể xem thông số chi tiết tại danh mục <a href="https://thietbivesinhgiakho.vn/bon-cau-1-khoi/" target="_blank" rel="noopener">bồn cầu 1 khối</a> trước khi chốt vị trí đặt ống chờ.
+        </div>
+      </section>
+
+      <section id="thm-2-4" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">04</span><h2>Tiêu chuẩn xương sứ nung 1280°C và men Nano</h2></div>
+        <p>Sứ vệ sinh đạt chuẩn phải trải qua chu trình nung 18–22 giờ ở nhiệt độ đỉnh 1280°C. Ở ngưỡng nhiệt này, cốt đất sét hóa thủy tinh hoàn toàn với tỷ lệ hút nước dưới 0.5%, giúp thân bồn cầu chịu tải trọng trên 300kg mà không bị rạn nứt hay thấm mùi.</p>
+        <p>Lớp men Nano kháng khuẩn phủ ngoài cùng tạo bề mặt siêu phẳng, giảm lực ma sát bề mặt khiến chất bẩn không thể bám dính và tự trôi theo dòng nước xoáy.</p>
+      </section>
+
+      <section id="thm-2-5" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">05</span><h2>Cấu tạo bộ xả 2 nhấn ABS và nắp đóng êm</h2></div>
+        <p>Bộ ruột xả bên trong két nước cần được làm từ nhựa ABS nguyên sinh chống giòn gãy trong môi trường nước có clo, đi kèm gioăng cao su silicon đàn hồi cao để giữ kín nước sau hàng chục nghìn lần nhấn.</p>
+        <p>Nắp bệ ngồi cao cấp sử dụng nhựa PP hoặc UF (Urea Formaldehyde) chống trầy xước, tích hợp trục bản lề giảm chấn (Soft-close) hạ xuống êm ái và có nút bấm tháo lắp nhanh trong 3 giây để vệ sinh khe bản lề.</p>
+      </section>
+
+      <section id="thm-2-6" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">06</span><h2>Xử lý khi tâm ống thoát bị lệch 250mm hoặc 350mm</h2></div>
+        <p>Nếu khi cải tạo nhà cũ, bạn đo được tâm ống thoát sàn chỉ cách tường 240–260mm, việc lắp một chiếc bồn cầu chuẩn 300mm sẽ khiến lưng két nước đụng tường trước khi lỗ thoát khớp nhau. Giải pháp an toàn là sử dụng bộ đế chuyển tâm chuyên dụng (dịch chuyển được 3–5cm) hoặc chọn mã bồn cầu có khoang gầm rộng cho phép điều chỉnh vị trí con thỏ.</p>
+      </section>
+
+      <section id="thm-2-7" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">07</span><h2>Quy trình lắp đặt gioăng cao su non chống hôi</h2></div>
+        <p>Tuyệt đối không đặt trực tiếp đáy sứ bồn cầu xuống sàn gạch mà không có gioăng cao su non (Wax ring). Vòng cao su non có độ dẻo tự nhiên sẽ lấp kín hoàn toàn khe hở giữa miệng xả sứ và cổ ống PVC dưới sàn khi đặt trọng lượng bồn cầu đè lên.</p>
+        <p>Sau khi cân chỉnh thăng bằng, chỉ bơm keo silicone trung tính chống mốc quanh viền chân đế; không nhồi đầy vữa xi măng đặc vào khoang rỗng dưới gầm bồn cầu.</p>
+      </section>
+
+      <section id="thm-2-8" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">08</span><h2>Các thông số cần kiểm tra khi nhận hàng</h2></div>
+        <p>Khi mở thùng carton tại công trình, hãy kiểm tra đủ 4 phụ kiện trong thùng: (1) Thân sứ bồn cầu và nắp két nước; (2) Bộ nắp ngồi đóng êm kèm cặp chốt bản lề; (3) Gioăng cao su non / con thỏ thoát sàn; (4) Dây cấp nước inox và van chia chữ T (nếu theo gói).</p>
+      </section>
+
+      <section id="thm-2-9" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">09</span><h2>Ba tình huống chọn kích thước thân bồn cầu</h2></div>
+        <p>Với phòng tắm nhỏ dưới 3m², ưu tiên mã thân ngắn dài 630–660mm để chừa lối đi. Với phòng tắm chung cư tiêu chuẩn 4m², chọn dòng thân vừa 680–700mm có bệ ngồi rộng rãi. Với phòng tắm Master trên 6m², chọn dòng thân đại hoặc kết hợp nắp rửa điện tử thông minh.</p>
+      </section>
+
+      <section id="thm-2-10" class="bx-chapter">
+        <div class="bx-chapter-head"><span class="bx-num">10</span><h2>Câu hỏi thường gặp và checklist nghiệm thu</h2></div>
+        <div class="bx-faq">
+          <details open>
+            <summary>Bồn cầu 1 khối xả có tốn nước hơn bồn cầu 2 khối không?</summary>
+            <p>Không. Nhờ thiết kế ống thoát Siphon Jet đường kính lớn và bề mặt men Nano trơn, bồn cầu 1 khối hiện đại chỉ cần 3L cho xả tiểu và 4.8L–6L cho xả đại để cuốn sạch hoàn toàn.</p>
+          </details>
+          <details>
+            <summary>Làm sao khắc phục hiện tượng bồn cầu xả nước rút chậm?</summary>
+            <p>Hãy kiểm tra hai điểm: ống thông hơi của hầm tự hoại có bị tắc hay không, và khi lắp đặt thợ có vô tình làm lệch gioăng cao su non che mất một phần tiết diện ống thoát PVC dưới sàn hay không.</p>
+          </details>
+        </div>
+        <div class="bx-check">
+          <h3>Checklist kiểm tra lắp đặt bồn cầu 1 khối</h3>
+          <div class="bx-check-grid">
+            <label><input type="checkbox"><span>Tâm thoát sàn đo sau ốp gạch đạt chuẩn 300mm (±10mm).</span></label>
+            <label><input type="checkbox"><span>Đã lắp đúng gioăng cao su non chính tâm ống thoát PVC.</span></label>
+            <label><input type="checkbox"><span>Đã xả cặn ống cấp nước trước khi đấu vào van phao két nước.</span></label>
+            <label><input type="checkbox"><span>Thử xả giấy ở cả 2 chế độ 3L/6L rút nhanh và phao tự ngắt kín.</span></label>
+          </div>
+        </div>
+      </section>
+
+      <section id="thm-2-11" class="bx-chapter" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <div class="bx-chapter-head"><span class="bx-num">11</span><h2>Tổng kết và bài viết liên quan</h2></div>
+        <div class="bx-end">
+          <h2>Đo chuẩn tâm thoát và lắp đúng gioăng chống hôi</h2>
+          <p>Một chiếc bồn cầu 1 khối chất lượng cao sẽ vận hành êm ái và không bao giờ phát sinh mùi hôi khi được định vị chuẩn trên tâm thoát 300mm cùng vòng đệm cao su non đúng kỹ thuật.</p>
+        </div>
+        <div class="bx-related">
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/chon-combo-thiet-bi-ve-sinh-dong-bo" target="_blank" rel="noopener">
+            <strong>Chọn combo thiết bị vệ sinh cho công trình</strong>
+            <span>Quy trình bóc tách gói 9–11 món đồng bộ và kiểm soát phụ kiện đấu nối.</span>
+          </a>
+          <a class="bx-related-card" href="https://sites.google.com/view/camnangthietbivesinh/bon-cau-thong-minh-lap-dat-dien-nuoc" target="_blank" rel="noopener">
+            <strong>Bồn cầu thông minh nắp rửa điện tử</strong>
+            <span>Chuẩn bị ổ cắm chống ẩm IPX4 và áp lực nước cho dòng bồn cầu tự động.</span>
+          </a>
+        </div>
+        <p class="bx-credits">Ảnh tham khảo: Thiết Bị Vệ Sinh Giá Kho. Thông số kích thước cần đối chiếu theo bản vẽ kỹ thuật của từng mã sản phẩm.</p>
+      </section>
+    </div>
+  </div>
+</article>
+</body>
+</html>
