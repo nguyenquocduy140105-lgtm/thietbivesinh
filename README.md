@@ -11,6 +11,8 @@ Tài liệu kỹ thuật tĩnh (Static HTML/CSS/JS Field Guide) hỗ trợ chủ
 3. **`kich-thuoc-ky-thuat-phong-tam.html`** — Bản vẽ thông số kỹ thuật: Chuẩn tâm thoát sàn bồn cầu `300mm` (đo sau ốp gạch), cao độ bàn đá chậu lavabo đặt nổi (`680–700mm`) vs âm bàn (`800–830mm`), khoảng cách tim cấp nước nóng lạnh `150mm` và ngưỡng áp lực nước sen cây tắm đứng (`≥ 1.2–1.5 bar`).
 4. **`checklist-nghiem-thu-thiet-bi.html`** — Bảng kiểm tương tác 12 điểm tại hiện trường và mẫu phiếu tóm tắt thông số kỹ thuật sao chép nhanh.
 5. **`kinh-nghiem-chon-combo-thiet-bi-ve-sinh.html`** — *Chuyên đề 01*: Bóc tách cấu phần combo thiết bị vệ sinh trọn bộ 9–11 món, kiểm soát nhóm phụ kiện đấu nối ẩn và dự trù ngân sách thực tế.
+6. **`tu-chau-lavabo-pvc-chong-nuoc.html`** — *Chuyên đề 02*: Tủ chậu lavabo nhựa PVC đặc & hợp kim nhôm chống nước, quy cách bàn đá 600–1200mm, bản lề giảm chấn Inox 304 và chuẩn cao độ ống chờ thoát tường 500–550mm.
+7. **`sen-tam-nong-lanh-inox-304.html`** — *Chuyên đề 03*: Giải phẫu củ sen tắm nóng lạnh & sen cây tắm đứng Inox SUS 304, lõi van trộn Alumina Ceramic, khoảng cách tim ống 150mm và bài toán áp lực cột nước thực tế.
 
 ---
 
